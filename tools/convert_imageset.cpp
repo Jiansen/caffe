@@ -40,9 +40,9 @@ DEFINE_int32(resize_height, 0, "Height images are resized to");
 int main(int argc, char** argv) {
   ::google::InitGoogleLogging(argv[0]);
 
-#ifndef GFLAGS_GFLAGS_H_
+// #ifndef GFLAGS_GFLAGS_H_
   namespace gflags = google;
-#endif
+// #endif
 
   gflags::SetUsageMessage("Convert a set of images to the leveldb/lmdb\n"
         "format used as input for Caffe.\n"
