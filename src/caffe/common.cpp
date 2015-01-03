@@ -31,6 +31,9 @@ int64_t cluster_seedgen(void) {
 
 
 void GlobalInit(int* pargc, char*** pargv) {
+  #ifndef GFLAGS_GFLAGS_H_
+    namespace gflags = google;
+  #endif
   // Google flags.
   ::gflags::ParseCommandLineFlags(pargc, pargv, true);
   // Google logging.
