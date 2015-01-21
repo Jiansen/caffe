@@ -387,7 +387,7 @@ py$(PROJECT): py
 py: $(PY$(PROJECT)_SO) $(PROTO_GEN_PY)
 
 $(PY$(PROJECT)_SO): $(STATIC_NAME) $(PY$(PROJECT)_SRC) $(PY$(PROJECT)_HXX_SRC)
-	$(CXX) -shared -o $@ $(PY$(PROJECT)_SRC) \
+	$(CXX) -shared -fPIC -o $@ $(PY$(PROJECT)_SRC) \
 		$(STATIC_NAME) $(LINKFLAGS) $(PYTHON_LDFLAGS)
 	@ echo
 
@@ -443,7 +443,7 @@ $(ALL_BUILD_DIRS): | $(BUILD_DIR_LINK)
 	@ mkdir -p $@
 
 $(NAME): $(PROTO_OBJS) $(OBJS) | $(LIB_BUILD_DIR)
-	$(CXX) -shared -o $@ $(OBJS) $(LINKFLAGS) $(LDFLAGS)
+	$(CXX) -shared -fPIC -o $@ $(OBJS) $(LINKFLAGS) $(LDFLAGS)
 	@ echo
 
 $(STATIC_NAME): $(PROTO_OBJS) $(OBJS) | $(LIB_BUILD_DIR)
