@@ -6,7 +6,8 @@ EXAMPLE=examples/mnist
 DATA=data/mnist
 BUILD=build/examples/mnist
 
-BACKEND="lmdb"
+# BACKEND="lmdb"
+BACKEND="leveldb"
 
 echo "Creating ${BACKEND}..."
 
