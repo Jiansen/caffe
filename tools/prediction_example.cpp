@@ -41,7 +41,7 @@ int main(int argc, char** argv)
 
 	// Load net
 	// Assume you are in Caffe master directory
-	Net<float> net("kaggle/AlexNet/alexnet.prototxt");
+	Net<float> net("kaggle/AlexNet/alexnet_prediction.prototxt");
 
 	// Load pre-trained net (binary proto)
 	// Assume you are already trained the example.
