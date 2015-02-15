@@ -142,7 +142,7 @@ int main(int argc, char** argv) {
         
       } else { // LEVELDB
         
-        // LOG(INFO) << "LEVELDB is currently not supported. sorry :)"; 
+        LOG(INFO) << "LEVELDB is currently not supported. sorry :)"; 
         return 0;
       }
       break;
@@ -175,7 +175,7 @@ int main(int argc, char** argv) {
   }
   iterations =(int)( (float)numdata / (float)batchsize ) + 1;
   LOG(INFO) << "# of iterations " << iterations; 
-  //LOG(INFO) << "Running for " << FLAGS_iterations << " iterations.";
+  LOG(INFO) << "Running for " << FLAGS_iterations << " iterations.";
 
   
   FILE *prediction_file;
@@ -185,7 +185,7 @@ int main(int argc, char** argv) {
     return 0;  
   }
   
-  //printf("# of iterations: %d\n", FLAGS_iterations);
+  printf("# of iterations: %d\n", FLAGS_iterations);
   int img_idx = 0, img_processed_idx = 0;  
   for (int i = 0; i < /*FLAGS_iterations*/ iterations; ++i) {
     if (i % (int)(0.1*iterations) == 0) {
