@@ -141,7 +141,8 @@ int main(int argc, char** argv) {
         numdata = mdb_mst.ms_entries;
         
       } else { // LEVELDB
-        LOG(INFO) << "LEVELDB is currently not supported. sorry :)"; 
+        
+        // LOG(INFO) << "LEVELDB is currently not supported. sorry :)"; 
         return 0;
       }
       break;
